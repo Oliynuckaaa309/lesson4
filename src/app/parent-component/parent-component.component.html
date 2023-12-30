@@ -1,0 +1,20 @@
+<div class="main-wraper">
+    <h1 class="main-text">My phone book!</h1>
+    <div class="inside-area"> 
+        <input type="text" class="main-input" placeholder="search text goes here" [(ngModel)]="field" name="field" >
+        <button value="add" class="main-button" (click)="addPhone()" >add phone</button>
+    </div>
+    <ng-template [ngIf]="isOpen" >
+        <div class="overlay">
+        <div class="is-open">
+        <h3>Add phone</h3>
+        <button class="button-disopen" (click)="closeForm()">x</button>
+        <div class="is-open2">
+        <input type="text" placeholder="first name goes here" class="is-input" [(ngModel)]="firstName2">
+        <input type="text" placeholder="second name goes here" class="is-input"  [(ngModel)]="lastName2">
+        <input type="text" placeholder="number phone goes here" class="is-input"  [(ngModel)]="phoneNumber2">
+        </div>
+        <button value="save" class="button-save" (click)="saveInfo() " >Save</button></div></div>
+    </ng-template>
+    <app-child-component [fromParentObject]="phoneData" parentField={{field}}></app-child-component>
+</div>

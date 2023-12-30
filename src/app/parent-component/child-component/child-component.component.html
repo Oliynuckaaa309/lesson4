@@ -1,0 +1,33 @@
+<table>
+    <thead>
+        <tr>
+            <th >First name</th>
+            <th >Last name</th>
+            <th>Number</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let info of fromParentObject | search:parentField , let i=index">
+        <td>{{info.firstName}}</td>
+        <td>{{info.lastName}}</td>
+        <td>{{info.phoneNumber}}</td> 
+        <td><button value="edit"  class="edit-button" (click)="editInfo(i)">Edit</button></td>
+        <td><button value="delete"  class="delete-button" (click)="deletePhone(i)" >Delete</button></td>
+      </tr>
+      <ng-container *ngIf="isEditForm" >
+        <div class="overlay">
+        <div class="is-open">
+        <h3>Add phone</h3>
+        <button class="button-disopen" (click)="disOpenForm()">x</button>
+        <div class="is-open2">
+        <input type="text" placeholder="first name goes here" class="is-input" [(ngModel)]="changeFirstName" >
+        <input type="text" placeholder="second name goes here" class="is-input" [(ngModel)]="changeLastName"  >
+        <input type="text" placeholder="number phone goes here" class="is-input"  [(ngModel)]="changePhone" >
+        </div>
+        <button value="save" class="button-save " (click)="saveChanges()" >Save</button></div></div>
+    </ng-container>
+    </tbody>
+   
+</table>

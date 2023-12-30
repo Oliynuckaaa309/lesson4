@@ -1,0 +1,92 @@
+.main-wraper{
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-text{
+color: rgb(172, 4, 4);
+padding-top: 10px;
+
+}
+.inside-area{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    margin-top: 25px;
+    border-top: 1px solid rgb(201, 200, 200);
+   
+   
+}
+.main-input{
+    width: 80%;
+    height: 40px;
+    border: 1px solid rgb(201, 200, 200) ;
+    margin-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.main-button{
+    width: 18%;
+    height: 40px;
+    margin-top: 15px;
+    color: rgb(241, 237, 237);
+    font-size: 15px;
+    background-color: green;
+}
+.is-open{
+    background-color: white;
+    width: 40%;
+    height: 320px;
+    border: 1px solid black;
+    padding-top: 20px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+.is-open2{
+    border-top: 1px solid rgb(151, 148, 148);
+    border-bottom: 1px solid rgb(151, 148, 148);
+    padding: 10px;
+}
+h3{
+    display: block;
+    padding-left: 20px;
+    padding-bottom: 0px;
+}
+.is-input{
+    width: 100%;
+    height: 35px;
+    padding-left: 20px;
+    border: 1px solid rgb(192, 190, 190);
+    margin-top: 20px;
+}
+
+.button-save{
+    width: 15%;
+    height: 35px;
+    background-color: rgb(37, 98, 220);
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    left: 80%;
+    top: 5%;
+}
+.button-disopen{
+    position: relative;
+    left: 90%;
+    top: -8%;
+    font-size: 20px;
+    background-color: white;
+}
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 117%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  transform: translateX(-10%);
+ 
+}
